@@ -17,4 +17,3 @@ let a = 10;
 let b = a--; // (increment the a by 1)
 console.log(b); // 10
 console.log(a);  // 9
-
