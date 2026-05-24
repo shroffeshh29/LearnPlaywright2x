@@ -1,36 +1,3 @@
-// Write a program that classifies a triangle based on its side lengths. Given three input values representing the lengths of the sides, determine if the triangle is equilateral (all sides are equal), isosceles (exactly two sides are equal), or scalene (no sides are equal). Use an if-else statement to classify the triangle.
-
-// let a = 10, b = 20, c = 30;
-// if (a === b && b === c && a === c) {
-//     console.log("It is an equilateral triangle")
-// }
-// else if (a === b && b === c && a !== c) {
-//     console.log("It is an isosceles triangle")
-// }
-// else {
-//     console.log("It is a scalene triangles")
-// }
-
-// console.log(2 ** 3)
-// console.log('5' + 3)
-// const arr = [1, 2, 3]
-// console.log(typeof arr)
-// console.log(true + true)
-// console.log(0 ?? 'hello')
-// console.log(10 % 3)
-// let a = 5;
-// let b = a++
-// console.log(a, b)
-
-// if ('') {
-//     console.log('Yes')
-// }
-// else {
-//     console.log('No')
-// }
-
-// console.log(Boolean([]))
-
 function statusCodeValidator(statusCode) {
     switch (statusCode) {
         case 200: {
