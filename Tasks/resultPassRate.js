@@ -1,34 +1,60 @@
-function solution(results) {
-    let pass = 0;
-    let fail = 0;
-    let skip = 0;
+function generateTestReport(testResults) {
 
-    for (let i = 0; i < results.length; i++) {
-        if (results[i] === "pass") {
-            pass++;
+    let passCount = 0;
+    let failCount = 0;
+    let skipCount = 0;
+
+    // Count test results
+    for (let i = 0; i < testResults.length; i++) {
+
+        if (testResults[i] === "pass") {
+            passCount++;
         }
-        else if (results[i] === "fail") {
-            fail++;
+        else if (testResults[i] === "fail") {
+            failCount++;
         }
-        else if (results[i] = "skip") {
-            skip++;
+        else if (testResults[i] === "skip") {
+            skipCount++;
         }
     }
 
-    const total = results.length;
-    const passRate = total === 0 ? "0%" : Math.floor(pass / total) * 100 + "%"
-    let verdict = '';
-    if (fail === 0) {
-        verdict = "ready for release";
+    // Total tests
+    let totalTests = testResults.length;
+
+    // Pass rate
+    let passRate = ((passCount / totalTests) * 100).toFixed(2);
+
+    // Verdict
+    let verdict = "";
+
+    if (failCount === 0) {
+        verdict = "Ready for Release";
     }
-    else if (fail <= 2) {
-        "review"
+    else if (failCount <= 2) {
+        verdict = "Needs Review";
     }
     else {
-        "block release"
+        verdict = "Block Release";
     }
 
-    return `Total : ${total},Pass: ${pass} , Fail: ${fail} , skip: ${skip} and passRate is ${passRate}`
+    // Print report
+    console.log("===== TEST REPORT =====");
+    console.log("Total Tests :", totalTests);
+    console.log("Passed      :", passCount);
+    console.log("Failed      :", failCount);
+    console.log("Skipped     :", skipCount);
+    console.log("Pass Rate   :", passRate + "%");
+    console.log("Verdict     :", verdict);
 }
 
-console.log(solution(["pass", "pass", "fail", "pass", "skip", "pass", "fail", "pass"]))
+
+// Function call
+generateTestReport([
+    "pass",
+    "fail",
+    "pass",
+    "skip",
+    "pass",
+    "fail",
+    "pass"
+]);
