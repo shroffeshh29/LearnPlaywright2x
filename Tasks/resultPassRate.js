@@ -3,8 +3,6 @@ function generateTestReport(testResults) {
     let passCount = 0;
     let failCount = 0;
     let skipCount = 0;
-
-    // Count test results
     for (let i = 0; i < testResults.length; i++) {
 
         if (testResults[i] === "pass") {
@@ -18,7 +16,6 @@ function generateTestReport(testResults) {
         }
     }
 
-    // Total tests
     let totalTests = testResults.length;
 
     // Pass rate
@@ -48,7 +45,6 @@ function generateTestReport(testResults) {
 }
 
 
-// Function call
 generateTestReport([
     "pass",
     "fail",

@@ -10,7 +10,7 @@ function generateTestUsers(count) {
         // Generate ID
         let userId = "USR-" + String(i).padStart(4, "0");
 
-        // Generate role using modulo
+
         let role = roles[(i - 1) % roles.length];
 
         // Every 3rd user inactive
@@ -28,5 +28,4 @@ function generateTestUsers(count) {
 }
 
 
-// Generate 8 users
 generateTestUsers(8);

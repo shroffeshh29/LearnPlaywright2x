@@ -37,4 +37,4 @@ function validateElement(isPresent, isDisplayed, isEnabled) {
 
 
 // Function Call
-validateElement(true, true, false);
+validateElement(false, false, false);
